@@ -1,13 +1,14 @@
 import React from 'react';
-import { GatheringItemCard } from '@/components/Cards';
-import { GatheringData, MealCategory } from './dumpData';
-import Button from '@/components/Button';
+import GatheringSection from './GatheringSection';
+import { MealCategory } from './dumpData';
 import HexagonShape from '@/components/HexagonShape';
 import BodyRecordChard from '@/components/BodyRecordChart';
 import DinnerImage from '@/assets/images/d01.jpg';
 import Circle from '@/components/Circle';
 
 const TopPage = () => {
+
+
   return (
     <div>
       <section className='mb-4 bg-black overflow-hidden relative  w-screen flex left-[calc(-50vw+629px)] h-[312px]'>
@@ -35,7 +36,7 @@ const TopPage = () => {
         </div>
       </section>
       <section className='my-8'>
-        <div class='flex items-center justify-center'>
+        <div className='flex items-center justify-center'>
           {MealCategory.map((item, index) => (
             <div key={index} className='mx-20'>
               <HexagonShape icon={item.icon} title={item.title} />
@@ -44,18 +45,7 @@ const TopPage = () => {
         </div>
       </section>
       <section className='my-8'>
-        <div class='grid grid-cols-2 md:grid-cols-4 gap-2'>
-          {GatheringData.map((item, index) => (
-            <GatheringItemCard
-              key={index}
-              image={item.image}
-              title={item.title}
-            />
-          ))}
-        </div>
-        <div className='flex justify-center items-center w-full'>
-          <Button>記録をもっと見る</Button>
-        </div>
+        <GatheringSection />
       </section>
     </div>
   );

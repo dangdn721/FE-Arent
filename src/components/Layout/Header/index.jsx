@@ -18,7 +18,7 @@ const Header = () => {
     <header>
       <nav className='bg-[#414141] shadow-[0px 3px 6px rgba(0, 0, 0, 0.160784)] border-gray-200 px-4 lg:px-6 dark:bg-gray-800'>
         <div className='flex flex-wrap justify-between items-center mx-auto max-w-screen-xl'>
-          <a href='#' className='flex items-center'>
+          <a href='/' className='flex items-center'>
             <img src={Logo} className='h-16' alt='Health App Logo' />
           </a>
           <div className='hidden justify-between items-center w-full lg:flex lg:w-auto lg:order-1'>
@@ -26,7 +26,7 @@ const Header = () => {
               <li className='flex items-center'>
                 <img src={IconMemo} className='mr-2' alt='Menu Item' />
                 <a
-                  href='#'
+                  href='/my-record'
                   className='block py-2 pr-4 pl-3 text-white rounded bg-primary-700 lg:bg-transparent lg:text-primary-700 lg:p-0 dark:text-white hover:font-bold'
                   aria-current='page'
                 >
@@ -58,7 +58,7 @@ const Header = () => {
               </li>
             </ul>
             <div className='ml-10 cursor-pointer'></div>
-            <div class='relative inline-block ml-10'>
+            <div className='relative inline-block ml-10'>
               <div className='flex items-center justify-items-end'>
                 <button
                   type='button'
@@ -73,12 +73,11 @@ const Header = () => {
               </div>
 
               <div
-                class={`right-0 z-10 mt-4 w-56 origin-top-right bg-transparent rounded-none border-none focus:outline-none ${isOpenMenu ? 'absolute' : 'hidden'
+                className={`right-0 z-10 mt-4 w-56 origin-top-right bg-transparent rounded-none border-none focus:outline-none ${isOpenMenu ? 'absolute' : 'hidden'
                   }`}
                 role='menu'
                 aria-orientation='vertical'
                 aria-labelledby='menu-button'
-                tabindex='-1'
               >
                 <div className='w-full flex justify-end'>
                   <button
@@ -91,15 +90,14 @@ const Header = () => {
                 </div>
 
                 <div
-                  class='bg-[#777777] text-white text-base shadow-lg ring-black ring-opacity-5 '
+                  className='bg-[#777777] text-white text-base shadow-lg ring-black ring-opacity-5 '
                   role='none'
                   ref={menuRef}
                 >
                   <a
-                    href='#'
+                    href='/my-record'
                     className=' block px-4 py-2 border-b border-[rgb(46,46,46,0.2)] hover:bg-[#c6bfb3]'
                     role='menuitem'
-                    tabindex='-1'
                   >
                     自分の記録
                   </a>
@@ -107,7 +105,6 @@ const Header = () => {
                     href='#'
                     className=' block px-4 py-2 border-b border-[rgb(46,46,46,0.2)] hover:bg-[#c6bfb3]'
                     role='menuitem'
-                    tabindex='-1'
                   >
                     体重グラフ
                   </a>
@@ -115,7 +112,6 @@ const Header = () => {
                     href='#'
                     className=' block px-4 py-2 border-b border-[rgb(46,46,46,0.2)] hover:bg-[#c6bfb3]'
                     role='menuitem'
-                    tabindex='-1'
                   >
                     目標
                   </a>
@@ -123,15 +119,13 @@ const Header = () => {
                     href='#'
                     className=' block px-4 py-2 border-b border-[rgb(46,46,46,0.2)] hover:bg-[#c6bfb3]'
                     role='menuitem'
-                    tabindex='-1'
                   >
                     選択中のコース
                   </a>
                   <a
-                    href='#'
+                    href='/column'
                     className=' block px-4 py-2 border-b border-[rgb(46,46,46,0.2)] hover:bg-[#c6bfb3]'
                     role='menuitem'
-                    tabindex='-1'
                   >
                     コラム一覧
                   </a>
@@ -139,7 +133,6 @@ const Header = () => {
                     href='#'
                     className=' block px-4 py-2 border-b border-[rgb(46,46,46,0.2)] hover:bg-[#c6bfb3]'
                     role='menuitem'
-                    tabindex='-1'
                   >
                     設定
                   </a>

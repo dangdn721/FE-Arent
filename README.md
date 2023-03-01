@@ -17,3 +17,6 @@ yarn dev
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 ![Finished Build](https://i.imgur.com/c9P343j.png)
+
+
+Github Repo: https://github.com/dangdn721/FE-Arent

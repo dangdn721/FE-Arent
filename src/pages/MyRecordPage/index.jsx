@@ -1,17 +1,19 @@
 import React from 'react';
-import { RecordCategoryCard, MyDiaryCard } from '@/components/Cards';
+import { RecordCategoryCard } from '@/components/Cards';
 import ExerciseSection from '@/components/ExerciseSection/index.jsx';
 import BodyRecordChart from '@/components/BodyRecordChart/index.jsx';
-import Button from '@/components/Button';
+import MyDiary from './MyDiary.jsx';
 
-import { MyRecordCategoryData, MyDiaryData, myExerciseData } from './dumpData.js';
-
+import {
+  MyRecordCategoryData,
+  myExerciseData,
+} from './dumpData.js';
 
 const ColumnPage = () => {
   return (
     <div className='py-10'>
       <section className='py-4'>
-        <div class='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12'>
+        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12'>
           {MyRecordCategoryData.map((item) => (
             <RecordCategoryCard
               key={item.id}
@@ -29,22 +31,7 @@ const ColumnPage = () => {
         <ExerciseSection data={new Array(20).fill(myExerciseData)} />
       </section>
       <section className='py-4'>
-        <h3 className='text-[#414141] font-normal my-2 text-2xl'>
-          MY DIARY
-        </h3>
-        <div class='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12'>
-          {MyDiaryData.map((item) => (
-            <MyDiaryCard
-              key={item.id}
-              title={item.title}
-              date={item.date}
-              description={item.description}
-            />
-          ))}
-        </div>
-        <div className='flex justify-center items-center w-full'>
-          <Button>コラムをもっと見る</Button>
-        </div>
+        <MyDiary />
       </section>
     </div>
   );
