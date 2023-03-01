@@ -10,7 +10,7 @@ import { MyRecordCategoryData, MyDiaryData, myExerciseData } from './dumpData.js
 const ColumnPage = () => {
   return (
     <div className='py-10'>
-      <section>
+      <section className='py-4'>
         <div class='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12'>
           {MyRecordCategoryData.map((item) => (
             <RecordCategoryCard
@@ -22,14 +22,14 @@ const ColumnPage = () => {
           ))}
         </div>
       </section>
-      <section>
+      <section className='py-4'>
         <BodyRecordChart />
       </section>
-      <section>
+      <section className='py-4'>
         <ExerciseSection data={new Array(20).fill(myExerciseData)} />
       </section>
-      <section>
-        <h3 className='text-[#414141] font-normal mb-2 mt-6 text-2xl'>
+      <section className='py-4'>
+        <h3 className='text-[#414141] font-normal my-2 text-2xl'>
           MY DIARY
         </h3>
         <div class='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12'>

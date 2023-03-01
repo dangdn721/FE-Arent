@@ -1,6 +1,6 @@
 import React from 'react';
 import { RecommendedCard, ColumnPostCard } from '@/components/Cards';
-import { RecommendedData, ColumnData } from './dumpDB';
+import { RecommendedData, ColumnData } from './dumpData';
 import Button from '@/components/Button';
 
 console.log({ ColumnData });
@@ -8,7 +8,7 @@ console.log({ ColumnData });
 const ColumnPage = () => {
   return (
     <div className='py-10'>
-      <section>
+      <section className='pt-4'>
         <div class='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12'>
           {RecommendedData.map((item) => (
             <RecommendedCard
@@ -19,7 +19,7 @@ const ColumnPage = () => {
           ))}
         </div>
       </section>
-      <section>
+      <section className='pb-4'>
         <div class='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mt-20'>
           {ColumnData.map((item) => (
             <ColumnPostCard

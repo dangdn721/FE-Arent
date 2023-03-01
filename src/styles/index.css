@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /* Write your own custom base styles here */
+  h1 {
+    @apply text-3xl font-bold md:text-5xl font-primary;
+  }
+
+  h2 {
+    @apply text-2xl font-bold md:text-4xl font-primary;
+  }
+
+  h3 {
+    @apply text-xl font-bold md:text-3xl font-primary;
+  }
+
+  h4 {
+    @apply text-lg font-bold font-primary;
+  }
+
+  body {
+    @apply text-sm font-primary md:text-base;
+    font-family: 'Noto Sans JP variant0', 'Inter', sans-serif;
+  }
+
+  main {
+    min-height: calc(100vh - 184px);
+    max-width: 1280px;
+    margin: auto;
+    background-color: white;
+  }
+  .linear-gradient-1 {
+    background: linear-gradient(32.95deg, #ffcc21 8.75%, #ff963c 86.64%);
+  }
+  .line-clamp-1 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+  }
+  .line-clamp-2 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+  }
+  .line-clamp-4 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+  }
+  .line-clamp-5 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 5;
+  }
+  .custom-scroll-1::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  .custom-scroll-1::-webkit-scrollbar-track {
+    background-color: #777777;
+    border-radius: 100px;
+  }
+
+  .custom-scroll-1::-webkit-scrollbar-thumb {
+    background-color: #ffcc21;
+    border-radius: 100px;
+  }
+}

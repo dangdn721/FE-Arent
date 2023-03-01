@@ -1,9 +1,19 @@
-import React from 'react'
+import React from 'react';
+import IconScroll from '@/assets/icons/component_scroll.svg';
 
 const ScrollToTop = () => {
-  return (
-    <div>ScrollToTop</div>
-  )
-}
+  const handleFnc = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
 
-export default ScrollToTop
+  return (
+    <button
+      className='fixed top-3/4 right-[calc((100vw-1280px)/2-100px)] bg-white cursor-pointer focus:outline-none'
+      onClick={handleFnc}
+    >
+      <img src={IconScroll} alt='Scroll To Top' />
+    </button>
+  );
+};
+
+export default ScrollToTop;

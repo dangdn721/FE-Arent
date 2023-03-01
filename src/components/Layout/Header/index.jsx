@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import useToggle from '@/hooks/useToggle';
+import useClickOutside from '@/hooks/useClickOutside';
 import Logo from '@/assets/icons/logo.svg';
 import IconMemo from '@/assets/icons/icon_memo.svg';
 import IconChallenge from '@/assets/icons/icon_challenge.svg';
@@ -9,6 +10,9 @@ import CloseIcon from '@/assets/icons/icon_close.svg';
 
 const Header = () => {
   const [isOpenMenu, setIsOpenMenu] = useToggle();
+
+  const menuRef = useRef();
+  useClickOutside(menuRef, () => isOpenMenu && setIsOpenMenu(false));
 
   return (
     <header>
@@ -89,6 +93,7 @@ const Header = () => {
                 <div
                   class='bg-[#777777] text-white text-base shadow-lg ring-black ring-opacity-5 '
                   role='none'
+                  ref={menuRef}
                 >
                   <a
                     href='#'
